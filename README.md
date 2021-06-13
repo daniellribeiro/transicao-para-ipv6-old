@@ -39,7 +39,7 @@ Na VM > clicar em iniciar > Settings > Display > em "Resolution" mudar para reso
 - Abrir arquivo pilha_dupla.imn
 - Clicar no Play
 - Clicar duas vezes no pc1, para abrir o terminal
-- Digitar: ```bash ping6 2001:db8:1::20```
+- Digitar: ```ping6 2001:db8:1::20```
 - Em packat loss deve aparecer 0%
-- Digitar: ```bash ping 192.0.3.20```
+- Digitar: ```ping 192.0.3.20```
 - Em packat loss deve aparecer 0%
