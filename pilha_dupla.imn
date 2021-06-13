@@ -1,0 +1,504 @@
+node n1 {
+    type router
+    model router
+    network-config {
+	hostname roteador1
+	!
+	interface eth1
+	 ip address 200.0.0.1/30
+	 ipv6 address 2800::1/127
+	!
+	interface eth0
+	 ip address 192.0.2.1/24
+	 ipv6 address 2001:db8:0::1/64
+	!
+    }
+    canvas c1
+    iconcoords {255.0 167.0}
+    labelcoords {255.0 199.0}
+    interface-peer {eth0 n3}
+    interface-peer {eth1 n2}
+}
+
+node n2 {
+    type router
+    model router
+    network-config {
+	hostname roteador2
+	!
+	interface eth1
+	 ip address 200.0.0.2/30
+	 ipv6 address 2800::2/127
+	!
+	interface eth0
+	 ip address 192.0.3.1/24
+	 ipv6 address 2001:db8:1::1/64
+	!
+    }
+    canvas c1
+    iconcoords {736.0 167.0}
+    labelcoords {736.0 199.0}
+    interface-peer {eth0 n4}
+    interface-peer {eth1 n1}
+}
+
+node n3 {
+    type lanswitch
+    network-config {
+	hostname switch1
+	!
+    }
+    canvas c1
+    iconcoords {256.0 259.0}
+    labelcoords {256.0 283.0}
+    interface-peer {e0 n1}
+    interface-peer {e1 n5}
+    interface-peer {e2 n6}
+}
+
+node n4 {
+    type lanswitch
+    network-config {
+	hostname switch2
+	!
+    }
+    canvas c1
+    iconcoords {737.0 253.0}
+    labelcoords {737.0 277.0}
+    interface-peer {e0 n2}
+    interface-peer {e1 n7}
+    interface-peer {e2 n8}
+}
+
+node n5 {
+    type router
+    model PC
+    network-config {
+	hostname pc1
+	!
+	interface eth0
+	 ip address 192.0.2.20/24
+	 ipv6 address 2001:db8:0::20/64
+	!
+    }
+    canvas c1
+    iconcoords {212.0 362.0}
+    labelcoords {212.0 394.0}
+    interface-peer {eth0 n3}
+}
+
+node n6 {
+    type router
+    model PC
+    network-config {
+	hostname pc2
+	!
+	interface eth0
+	 ip address 192.0.2.21/24
+	 ipv6 address 2001:db8:0::21/64
+	!
+    }
+    canvas c1
+    iconcoords {310.0 361.0}
+    labelcoords {310.0 393.0}
+    interface-peer {eth0 n3}
+}
+
+node n7 {
+    type router
+    model PC
+    network-config {
+	hostname pc3
+	!
+	interface eth0
+	 ip address 192.0.3.20/24
+	 ipv6 address 2001:db8:1::20/64
+	!
+    }
+    canvas c1
+    iconcoords {687.0 358.0}
+    labelcoords {687.0 390.0}
+    interface-peer {eth0 n4}
+}
+
+node n8 {
+    type router
+    model PC
+    network-config {
+	hostname pc4
+	!
+	interface eth0
+	 ip address 192.0.3.21/24
+	 ipv6 address 2001:db8:1::21/64
+	!
+    }
+    canvas c1
+    iconcoords {783.0 360.0}
+    labelcoords {783.0 392.0}
+    interface-peer {eth0 n4}
+}
+
+link l1 {
+    nodes {n1 n3}
+    bandwidth 0
+}
+
+link l2 {
+    nodes {n3 n5}
+    bandwidth 0
+}
+
+link l3 {
+    nodes {n3 n6}
+    bandwidth 0
+}
+
+link l4 {
+    nodes {n2 n4}
+    bandwidth 0
+}
+
+link l5 {
+    nodes {n4 n7}
+    bandwidth 0
+}
+
+link l6 {
+    nodes {n4 n8}
+    bandwidth 0
+}
+
+link l7 {
+    nodes {n1 n2}
+    bandwidth 0
+}
+
+annotation a1 {
+    iconcoords {50.0 50.0 476.0 432.0}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #C0C0FF
+    width 0
+    border #00fffc
+    rad 25
+    canvas c1
+}
+
+annotation a2 {
+    iconcoords {518.0 47.0 960.0 436.0}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #C0C0FF
+    width 0
+    border black
+    rad 25
+    canvas c1
+}
+
+annotation a3 {
+    iconcoords {167.0 67.0}
+    type text
+    label {REDE A}
+    labelcolor #ff0000
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a4 {
+    type text
+    iconcoords {243.0 115.0}
+    label {}
+    canvas c1
+}
+
+annotation a5 {
+    type text
+    iconcoords {284.0 116.0}
+    label {}
+    canvas c1
+}
+
+annotation a6 {
+    iconcoords {627.0 64.0}
+    type text
+    label {REDE B}
+    labelcolor #ff0000
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a7 {
+    type text
+    iconcoords {604.0 120.0}
+    label {}
+    canvas c1
+}
+
+annotation a8 {
+    type text
+    iconcoords {266.0 120.0}
+    label {}
+    canvas c1
+}
+
+annotation a9 {
+    type text
+    iconcoords {201.0 137.0}
+    label {}
+    canvas c1
+}
+
+annotation a10 {
+    iconcoords {166.0 90.0}
+    type text
+    label {192.168.0.2.0/24}
+    labelcolor #ff0000
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a11 {
+    type text
+    iconcoords {199.0 87.0}
+    label {}
+    canvas c1
+}
+
+annotation a12 {
+    iconcoords {165.0 113.0}
+    type text
+    label {2001:db8:0::/64}
+    labelcolor #ff0000
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a13 {
+    iconcoords {231.0 129.0}
+    type text
+    label {}
+    labelcolor #ff0000
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a14 {
+    type text
+    iconcoords {283.0 120.0}
+    label {}
+    canvas c1
+}
+
+annotation a15 {
+    iconcoords {626.0 87.0}
+    type text
+    label {192.0.3.0/24}
+    labelcolor #ff0000
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a16 {
+    type text
+    iconcoords {549.0 89.0}
+    label {}
+    canvas c1
+}
+
+annotation a17 {
+    type text
+    iconcoords {514.0 100.0}
+    label {}
+    canvas c1
+}
+
+annotation a18 {
+    iconcoords {622.0 107.0}
+    type text
+    label {2001:db8:1::/64}
+    labelcolor #ff0000
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a19 {
+    type text
+    iconcoords {544.0 98.0}
+    label {}
+    canvas c1
+}
+
+annotation a20 {
+    iconcoords {91.0 354.0}
+    type text
+    label {192.0.2.20/24}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a21 {
+    type text
+    iconcoords {214.0 403.0}
+    label {}
+    canvas c1
+}
+
+annotation a22 {
+    iconcoords {61.0 375.0}
+    type text
+    label {2001:db8:0::20/64}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a23 {
+    type text
+    iconcoords {205.0 405.0}
+    label {}
+    canvas c1
+}
+
+annotation a24 {
+    iconcoords {553.0 349.0}
+    type text
+    label {192.0.4.20/24}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a25 {
+    iconcoords {523.0 372.0}
+    type text
+    label {2001:db8:1::20/64}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a26 {
+    iconcoords {362.0 354.0}
+    type text
+    label {192.0.2.21/24}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a27 {
+    iconcoords {331.0 375.0}
+    type text
+    label {2001:db8:0::20/64}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a28 {
+    iconcoords {811.0 355.0}
+    type text
+    label {192.0.4.21/24}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a29 {
+    iconcoords {811.0 373.0}
+    type text
+    label {2001:db8:1::21/64}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a30 {
+    iconcoords {292.0 151.0}
+    type text
+    label {200.0.0.1/30}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a31 {
+    iconcoords {292.0 178.0}
+    type text
+    label {2800::1/127}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a32 {
+    type text
+    iconcoords {354.0 178.0}
+    label {}
+    canvas c1
+}
+
+annotation a33 {
+    iconcoords {617.0 149.0}
+    type text
+    label {200.0.0.2/30}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a34 {
+    iconcoords {616.0 182.0}
+    type text
+    label {2800::2/127}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+canvas c1 {
+    name {Canvas1}
+}
+
+option global {
+    interface_names no
+    ip_addresses no
+    ipv6_addresses no
+    node_labels yes
+    link_labels yes
+    show_api no
+    background_images no
+    annotations yes
+    grid yes
+    traffic_start 0
+}
+
+option session {
+}
+
