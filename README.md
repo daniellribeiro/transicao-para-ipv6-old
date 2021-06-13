@@ -10,7 +10,24 @@ Primeiramente será preciso baixar os programas abaixo:
 - Abrir o software Oracle VirtualBox
 - Clicar em Arquivo > Importar Appliance
 - Selecionar a VM baixada, avançar os passos, e clicar em importar.
+
+## Ajustar tamanho da tela
 - Clicar em iniciar, para abrir o ambiente que será usado nos testes
+- No software do Oracle VirtualBox clicar em Dispositivos > Inserir imagem de CD dos adicionais para convidado
+- Na VM > clicar em File Manager > VBox_GAs_6.1.22
+- Na VM > ir para Área de Trabalho > abrir Terminal Emulador
+- Executar o script abaixo:
+```bash
+sudo su -
+```
+O comando acima solitara uma senha, digitar ipv6br
+```bash
+cd /media/VBox_GAs_6.1.22
+./VBoxLinuxAdditions.run
+reboot
+```
+A VM reiniciará
+Na VM > clicar em iniciar > Settings > Display > em "Resolution" mudar para resolução do seu monitor
 
 ## Pilha Dupla
 - Abrir programa Core localizado na área de trabalho da VM
