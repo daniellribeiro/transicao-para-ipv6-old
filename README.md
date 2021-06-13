@@ -29,6 +29,12 @@ reboot
 A VM reiniciará
 Na VM > clicar em iniciar > Settings > Display > em "Resolution" mudar para resolução do seu monitor
 
+##Habilitar compartilhamento de arquivos entre a VM e a Máquina Física
+- Criar uma pasta na área de trabalho da sua Máquina Física
+- No software do Oracle VirtualBox clicar em Maquina > Configurações > Pastas compartilhadas
+- Clicar no +
+- No caminho da pasta, selecionar a pasta que acabou de criar
+- Marcar as opções "Montar Automaticamente" e  "Tornar permanente"
 ## Pilha Dupla
-- Abrir programa Core localizado na área de trabalho da VM
+- Na VM > ir para Área de Trabalho > abrir pasta lab
 - 
