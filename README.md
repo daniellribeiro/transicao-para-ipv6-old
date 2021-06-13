@@ -1,6 +1,9 @@
 # Transicao para ipv6
 Esse tutorial tem o objetivo de auxiliar na execução dos testes práticos das técnicas de transição abaixo, que auxiliaram na transição do IPV4 para o IPV6.
 - Pilha Dupla
+- Serviço de Tunnel Broker (Tunelamento)
+- Túnel 6to4 (Tunelamento)
+- NAT64 (Tradução)
 
 Primeiramente será preciso baixar os programas abaixo:
 - [Oracle VirtualBox](https://download.virtualbox.org/virtualbox/6.1.22/VirtualBox-6.1.22-144080-Win.exe)
@@ -13,14 +16,14 @@ Primeiramente será preciso baixar os programas abaixo:
 
 ## Ajustar tamanho da tela
 - Clicar em iniciar, para abrir o ambiente que será usado nos testes
-- No software do Oracle VirtualBox clicar em Dispositivos > Inserir imagem de CD dos adicionais para convidado
+- No software do Oracle VirtualBox, clicar em Dispositivos > Inserir imagem de CD dos adicionais para convidado
 - Na VM > clicar em File Manager > VBox_GAs_6.1.22
 - Na VM > ir para Área de Trabalho > abrir Terminal Emulador
 - Executar o script abaixo:
 ```bash
 sudo su -
 ```
-O comando acima solitara uma senha, digitar ipv6br
+O comando acima solitara uma senha, digitar **ipv6br**
 ```bash
 cd /media/VBox_GAs_6.1.22
 ./VBoxLinuxAdditions.run
@@ -30,7 +33,7 @@ A VM reiniciará
 Na VM > clicar em iniciar > Settings > Display > em "Resolution" mudar para resolução do seu monitor
 
 ##Habilitar compartilhamento de arquivos entre a VM e a Máquina Física
-- Na VM > clicar em Dispositivos > Área de Transferencia Compartilhada > marcar bi-direcional
+- Na VM > clicar em Dispositivos > Área de Transferência Compartilhada > marcar bi-direcional
 - Na VM > clicar em Dispositivos > Arastar e Soltar > marcar bi-direcional
 
 ## Pilha Dupla
