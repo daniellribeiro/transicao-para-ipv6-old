@@ -40,6 +40,6 @@ Na VM > clicar em iniciar > Settings > Display > em "Resolution" mudar para reso
 - Clicar no Play
 - Clicar duas vezes no pc1, para abrir o terminal
 - Digitar: ```ping6 2001:db8:1::20```
-- Em packat loss deve aparecer 0%
+- Em packet loss deve aparecer 0%
 - Digitar: ```ping 192.0.3.20```
-- Em packat loss deve aparecer 0%
+- Em packet loss deve aparecer 0%
