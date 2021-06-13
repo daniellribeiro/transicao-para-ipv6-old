@@ -378,10 +378,10 @@ annotation a23 {
 annotation a24 {
     iconcoords {553.0 349.0}
     type text
-    label {192.0.4.20/24}
+    label {192.0.3.20/24}
     labelcolor black
     fontfamily {Arial}
-    fontsize {12}
+    fontsize 12
     canvas c1
 }
 
@@ -408,20 +408,20 @@ annotation a26 {
 annotation a27 {
     iconcoords {331.0 375.0}
     type text
-    label {2001:db8:0::20/64}
+    label {2001:db8:0::21/64}
     labelcolor black
     fontfamily {Arial}
-    fontsize {12}
+    fontsize 12
     canvas c1
 }
 
 annotation a28 {
     iconcoords {811.0 355.0}
     type text
-    label {192.0.4.21/24}
+    label {192.0.3.21/24}
     labelcolor black
     fontfamily {Arial}
-    fontsize {12}
+    fontsize 12
     canvas c1
 }
 
@@ -468,7 +468,7 @@ annotation a33 {
     label {200.0.0.2/30}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     canvas c1
 }
 
@@ -478,7 +478,7 @@ annotation a34 {
     label {2800::2/127}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     canvas c1
 }
 
