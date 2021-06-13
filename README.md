@@ -30,11 +30,16 @@ A VM reiniciará
 Na VM > clicar em iniciar > Settings > Display > em "Resolution" mudar para resolução do seu monitor
 
 ##Habilitar compartilhamento de arquivos entre a VM e a Máquina Física
-- Criar uma pasta na área de trabalho da sua Máquina Física
-- No software do Oracle VirtualBox clicar em Maquina > Configurações > Pastas compartilhadas
-- Clicar no +
-- No caminho da pasta, selecionar a pasta que acabou de criar
-- Marcar as opções "Montar Automaticamente" e  "Tornar permanente"
+- Na VM > clicar em Dispositivos > Área de Transferencia Compartilhada > marcar bi-direcional
+- Na VM > clicar em Dispositivos > Arastar e Soltar > marcar bi-direcional
+
 ## Pilha Dupla
-- Na VM > ir para Área de Trabalho > abrir pasta lab
-- 
+- Baixar arquivo pilha_dupla.imn
+- Arastar arquivo baixado para VM
+- Abrir arquivo pilha_dupla.imn
+- Clicar no Play
+- Clicar duas vezes no pc1, para abrir o terminal
+- Digitar: ```ping6 2001:db8:1::20```
+- Em packet loss deve aparecer 0%
+- Digitar: ```ping 192.0.3.20```
+- Em packet loss deve aparecer 0%
