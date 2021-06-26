@@ -10,7 +10,8 @@ Primeiramente será preciso baixar os programas abaixo:
 - [Baixar VM](https://ipv6.br/downloads/CursoIPv6br-CORE4.6-20150318.ova)
 
 ## Importar Máquina Virtual
-- Abrir o software Oracle VirtualBox
+- Instalar o software Oracle VirtualBox
+- Abrir o Oracle VirtualBox
 - Clicar em Arquivo > Importar Appliance
 - Selecionar a VM baixada, avançar os passos, e clicar em importar.
 
