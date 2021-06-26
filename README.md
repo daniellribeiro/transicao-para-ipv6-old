@@ -17,7 +17,7 @@ Primeiramente será preciso baixar os programas abaixo:
 
 ## Ajustar tamanho da tela
 - Clicar em iniciar, para abrir o ambiente que será usado nos testes
-- No software do Oracle VirtualBox, clicar em Dispositivos > Inserir imagem de CD dos adicionais para convidado
+- Clicar em Dispositivos > Inserir imagem de CD dos adicionais para convidado
 - Na VM > clicar em File Manager > VBox_GAs_6.1.22
 - Na VM > ir para Área de Trabalho > abrir Terminal Emulador
 - Executar o script abaixo:
