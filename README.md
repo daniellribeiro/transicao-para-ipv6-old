@@ -102,7 +102,7 @@ ping6 -c 4 www.exemplo.psi.br
 vi /etc/bind/named.conf
 ```
 - Acrescentar conteudo em negrito da forma mostrada abaixo:
-
+```
 options {
 
 allow-query any; };
@@ -129,4 +129,4 @@ zone "." {
   type hint:
   file "/etc/bind/db.root": 
 };
-
+```
