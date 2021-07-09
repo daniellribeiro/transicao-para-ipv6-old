@@ -104,4 +104,15 @@ vi /etc/bind/named.conf
 - Apertar letra **I** do teclado, para editar arquivo
 - Acrescentar conteudo em negrito da forma mostrada abaixo:
 
-![imagem](nat64_imagem1.png)
+![imagem1](nat64_imagem1.png)
+
+- Apertar tecla **ESC** do teclado
+- Digitar **:x** para salvar e sair do editor
+
+- Digitar comando abaixo:
+```
+named-checkconf -p /etc/bind/named.conf
+```
+- Deve ser exibido um resultado igual ao mostrado abaixo:
+![imagem2](nat64_imagem2.png)
+
