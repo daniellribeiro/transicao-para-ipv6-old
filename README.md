@@ -95,7 +95,7 @@ host 203.0.113.200
 ```
 ping6 -c 4 www.exemplo.psi.br
 ```
-- Em packet loss deve aparecer 100%
+- Em packet loss deve aparecer **unknown host**
 
 - Abrir o servidor DNS64 e digitar o comando abaixo:
 ```
