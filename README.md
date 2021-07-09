@@ -60,12 +60,12 @@ reboot
 ```
 touch tayga.conf
 
-echo tun-device nat64 > tayga.conf
-echo ipv4-addr 192.168.255.1 > tayga.conf
-echo prefix 2001:db8:ca00::/96 > tayga.conf
-echo dynamic-pool 192.168.255.0/24 > tayga.conf
-echo data-dir /tmp > tayga.conf
-echo map 192.168.255.100 2001:db8:ca5a:2::2 > tayga.conf
+echo tun-device nat64 >> tayga.conf
+echo ipv4-addr 192.168.255.1 >> tayga.conf
+echo prefix 2001:db8:ca00::/96 >> tayga.conf
+echo dynamic-pool 192.168.255.0/24 >> tayga.conf
+echo data-dir /tmp >> tayga.conf
+echo map 192.168.255.100 2001:db8:ca5a:2::2 >> tayga.conf
 
 tayga --mktun
 
