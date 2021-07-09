@@ -104,3 +104,4 @@ vi /etc/bind/named.conf
 - Apertar letra **I** do teclado, para editar arquivo
 - Acrescentar conteudo em negrito da forma mostrada abaixo:
 
+![imagem](nat64_imagem1.png)
