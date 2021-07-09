@@ -78,4 +78,27 @@ iptables -A FORWARD -i eth0 -o nat64 -m state --state RELATED,ESTABLISHED -j ACC
 iptables -A FORWARD -i nat64 -o eth0 -j ACCEPT
 
 tayga -d -c tayga.conf
+
 ```
+- Abrir host n1 e digitar os comandos abaixo:
+```
+ping6 -c 4 2001:db8:ca00::203.0.113.200
+```
+- Em packet loss deve aparecer 0%
+
+- Digitar o comando abaixo em n1:
+```
+host 203.0.113.200
+```
+- O comando acima irá revelar que a url do servidor n10WWWExemplo é **www.exemplo.psi.br**
+- Digitar o comando abaixo em n1:
+```
+ping6 -c 4 www.exemplo.psi.br
+```
+- Em packet loss deve aparecer 100%
+
+- Abrir o servidor DNS64 e digitar o comando abaixo:
+```
+vi /etc/bind/named.conf
+```
+- Digitar conteudo abaixo 
