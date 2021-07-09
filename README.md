@@ -116,3 +116,17 @@ named-checkconf -p /etc/bind/named.conf
 - Deve ser exibido um resultado igual ao mostrado abaixo:
 ![imagem2](nat64_imagem2.png)
 
+- Executar os comandos abaixo:
+```
+killall named
+
+named -c /etc/bind/named.conf
+```
+- Abra host n2, e execute o comando abaixo:
+```
+host www.exemplo.psi.br
+```
+- Deve ser exibido um resultado igual ao mostrado abaixo:
+![imagem3](nat64_imagem3.png)
+
+
