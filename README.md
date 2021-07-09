@@ -101,4 +101,29 @@ ping6 -c 4 www.exemplo.psi.br
 ```
 vi /etc/bind/named.conf
 ```
-- Digitar conteudo abaixo 
+- Acrescentar conteudo em negrito da forma mostrada abaixo:
+```
+options {
+
+allow-query any; }; allow-query-cache { 192.0.2.0/24; 2001:db8:ca5a::/48;
+
+127.0.0.0/8;
+
+::1/128;
+
+allow-recursion { 127.0.0.0/8;
+
+192.0.2.0/24; ::1/128;
+
+2001: db8:ca5a::/48; listen-on-v6 { any; };
+
+disable-empty-zone "2.0.192.in-addr.arpa"; disable-empty-zone "100.51.198.in-addr.arpa"; disable-empty-zone "113.0.203.in-addr.arpa"; disable-empty-zone "8.b.d.0.1.0.0.2.ip6.arpa":
+
+};
+
+zone "." {
+
+type hint:
+
+file "/etc/bind/db.root": };
+```
