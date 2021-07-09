@@ -129,4 +129,8 @@ host www.exemplo.psi.br
 - Deve ser exibido um resultado igual ao mostrado abaixo:
 ![imagem3](nat64_imagem3.png)
 
+- Digitar o comando abaixo:
+```
+ping6 -c 4 www.exemplo.psi.br
+```
 
