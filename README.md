@@ -56,7 +56,7 @@ reboot
 - Abrir arquivo NAT_64.imn
 - Clicar no Play
 - Clicar duas vezes no NAT64, para abrir o terminal
-- Copiar o script abaixo no terminal:
+- Digitar os comandos abaixo no terminal:
 ```
 touch tayga.conf
 
@@ -76,5 +76,6 @@ ip -6 route add 2001:db8:ca00::/96 dev nat64
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 iptables -A FORWARD -i eth0 -o nat64 -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -i nat64 -o eth0 -j ACCEPT
+
 tayga -d -c tayga.conf
 ```
