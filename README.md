@@ -134,7 +134,7 @@ host www.exemplo.psi.br
 ping6 -c 4 www.exemplo.psi.br
 ```
 
-##Túnel 6to4
+## Túnel 6to4
 - Baixar arquivo 6to4.imn
 - Arastar arquivo baixado para VM
 - Clicar no Play
