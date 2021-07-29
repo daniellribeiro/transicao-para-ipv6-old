@@ -138,7 +138,13 @@ ping6 -c 4 www.exemplo.psi.br
 - Baixar arquivo 6to4.imn
 - Arastar arquivo baixado para VM
 - Clicar no Play
-- Clicar duas vezes no pc1:
+- Clicar duas vezes no pc1
+- Executar o comando abaixo:
+```
+ping6 2001:db8:0::20
+```
+- Em packet loss deve aparecer 100%
+- Ainda no pc1, executar os comandos abaixo:
 ``` 
 ip addr add 2002:CB00:7101::1 dev  lo
 ip tunnel add to1234 mode sit ttl 64 remote 192.88.99.1 local 192.168.0.20
@@ -146,10 +152,19 @@ ip link set dev to1234 up
 ip -6 route add 2002:CB00:7101::2 dev to1234
 ip -6 route add ::/0 dev to1234
 ```
-- No r3:
+- No r3 digitar os comandos abaixo:
 ```
 ip addr add 2002:CB00:7101::2 dev lo
 ip tunnel add toABCD mode sit ttl 64 remote 192.168.0.20 local 192.88.99.1
 ip link set dev  toABCD up
 ip -6 route add 2002:CB00:7101::1 dev toABCD
+ping6 2002:CB00:7101::1
 ```
+- Em packet loss deve aparecer 0%
+- Clicar duas vezes no pc1
+- Executar o comando abaixo:
+```
+ping6 2001:db8:0::20
+```
+- Em packet loss deve aparecer 0%
+
