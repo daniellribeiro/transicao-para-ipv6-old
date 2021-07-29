@@ -71,7 +71,7 @@ node n2 {
     type router
     model router
     network-config {
-	hostname Relay6to4
+	hostname relay6to4
 	!
 	interface eth1
 	 ipv6 address 2001:db8:0::1/64
@@ -134,7 +134,7 @@ annotation a1 {
     label {IPV4}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     color #C0C0FF
     width 0
     border black
@@ -148,7 +148,7 @@ annotation a2 {
     label {IPV6}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     color #00c0ff
     width 0
     border black
