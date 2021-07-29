@@ -134,7 +134,7 @@ host www.exemplo.psi.br
 ping6 -c 4 www.exemplo.psi.br
 ```
 
-#Túnel 6to4
+##Túnel 6to4
 - Baixar arquivo 6to4.imn
 - Arastar arquivo baixado para VM
 - Clicar no Play
@@ -146,7 +146,7 @@ ip link set dev to1234 up
 ip -6 route add 2002:CB00:7101::2 dev to1234
 ip -6 route add ::/0 dev to1234
 ```
-- no r3:
+- No r3:
 ```
 ip addr add 2002:CB00:7101::2 dev lo
 ip tunnel add toABCD mode sit ttl 64 remote 192.168.0.20 local 192.88.99.1
