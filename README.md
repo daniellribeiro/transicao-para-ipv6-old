@@ -50,6 +50,26 @@ reboot
 - Esperar uns 5 segundos e parar execução
 - Em packet loss deve aparecer 0%
 
+##Tunnel Broker
+- Baixar o arquivo tunnel_broker.imn
+- Arrastar arquivo baixado para VM
+- Abrir o tunnel_broker.imn
+- Clicar no Play
+- Clicar duas vezes no pc1, para abrir o terminal
+- Digitar os comandos abaixo:
+```
+ip addr add 2001:db8:0::3 dev lo
+ip tunnel add to1234 mode sit ttl 64 remote 192.0.1.1 local 192.0.1.2
+ip link set dev to1234 up
+ip -6 route add 2001:db8:0::1 dev to1234
+```
+- Clicar duas vezes no rTunnelBroker
+- Digitar os comandos abaixo:
+```
+ip tunnel add toABCD mode sit ttl 64 remote 192.168.0.20 local 192.0.1.1
+ip link set dev toABCD up
+ip -6 route add 2001:db8:0::3 dev toABCD
+```
 ## NAT64
 - Baixar o arquivo NAT_64.imn
 - Arrastar arquivo baixado para VM
