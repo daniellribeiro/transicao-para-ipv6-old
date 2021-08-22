@@ -1,5 +1,5 @@
 # Transicao para ipv6
-Esse tutorial tem o objetivo de auxiliar na execução dos testes práticos das técnicas de transição abaixo, que auxiliaram na transição do IPV4 para o IPV6.
+Esse tutorial tem o objetivo de auxiliar na execução dos testes práticos das técnicas de transição abaixo.
 - Pilha Dupla
 - Serviço de Tunnel Broker (Tunelamento)
 - Túnel 6to4 (Tunelamento)
