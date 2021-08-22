@@ -58,23 +58,25 @@ reboot
 - Clicar duas vezes no pc1, para abrir o terminal
 - Digitar os comandos abaixo:
 ```
-ip addr add 2001:db8:0::3 dev lo
-ip tunnel add to1234 mode sit ttl 64 remote 192.0.1.1 local 192.0.1.2
+ip addr add 2001:db8:2::2 dev lo
+ip tunnel add to1234 mode sit ttl 64 remote 192.0.1.1 local 192.0.2.20
 ip link set dev to1234 up
-ip -6 route add 2001:db8:0::1 dev to1234
+ip -6 route add 2001:db8:2::1 dev to1234
 ip -6 route add ::/0 dev to1234
 ```
 - Clicar duas vezes no rTunnelBroker
 - Digitar os comandos abaixo:
 ```
-ip tunnel add toABCD mode sit ttl 64 remote 192.168.0.20 local 192.0.1.1
+ip addr add 2001:db8:2::1 dev lo
+ip tunnel add toABCD mode sit ttl 64 remote 192.0.2.20 local 192.0.1.1
 ip link set dev toABCD up
-ip -6 route add 2001:db8:0::3 dev toABCD
-ping6 2001:db8:0::1
+ip -6 route add 2001:db8:2::2 dev toABCD
+ping6 2001:db8:2::2
 ```
 - Em pc1, digitar o comando abaixo:
 ```
-ping6 2001:db8:0::3
+ping6 2001:db8:2::1
+ping6 2001:db8:1::20
 ```
 ## NAT64
 - Baixar o arquivo NAT_64.imn
