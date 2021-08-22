@@ -16,11 +16,11 @@ Primeiramente será preciso baixar os programas abaixo:
 - Selecionar a VM baixada, avançar os passos, e clicar em importar.
 
 ## Habilitar importar arquivos da Máquina Física para Máquina Virtual
+- Clicar em iniciar, para abrir o ambiente que será usado nos testes
 - Ir na aba Dispositivos > Área de Transferência Compartilhada > Bi-direcional
 - Ir na aba Dispositivos > Arastar e Soltar > Bi-direcional
 
 ## Ajustar tamanho da tela
-- Clicar em iniciar, para abrir o ambiente que será usado nos testes
 - Clicar em Dispositivos > Inserir imagem de CD dos adicionais para convidado
 - Na VM > clicar em iniciar > File Manager > VBox_GAs_6.1.22
 - Na VM > ir para Área de Trabalho > abrir Terminal Emulador
