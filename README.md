@@ -39,7 +39,7 @@ reboot
 
 ## Pilha Dupla
 - Baixar arquivo pilha_dupla.imn
-- Arastar arquivo baixado para VM
+- Arrastar arquivo baixado para VM
 - Abrir arquivo pilha_dupla.imn
 - Clicar no Play
 - Clicar duas vezes no pc3, para abrir o terminal
