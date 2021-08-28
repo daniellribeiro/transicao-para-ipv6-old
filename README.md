@@ -24,11 +24,12 @@ Primeiramente será preciso baixar os programas abaixo:
 - Clicar em Dispositivos > Inserir imagem de CD dos adicionais para convidado
 - Na VM > clicar em iniciar > File Manager > VBox_GAs_6.1.22
 - Na VM > ir para Área de Trabalho > abrir Terminal Emulador
-- Executar o script abaixo:
+- Executar o comando abaixo:
 ```bash
 sudo su -
 ```
 O comando acima solitara uma senha, digitar **ipv6br**
+- Executar o comando abaixo:
 ```bash
 cd /media/VBox_GAs_6.1.22
 ./VBoxLinuxAdditions.run
