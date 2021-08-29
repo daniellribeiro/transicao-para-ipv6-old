@@ -77,7 +77,7 @@ ping6 2001:db8:2::2
 - Em pc1, digitar o comando abaixo:
 ```
 ping6 2001:db8:2::1
-ping6 2001:db8:1::20
+ping6 2001:db8::20
 ```
 ## NAT64
 - Baixar o arquivo NAT_64.imn
