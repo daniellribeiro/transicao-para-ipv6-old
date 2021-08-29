@@ -106,7 +106,7 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 iptables -A FORWARD -i eth0 -o nat64 -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -i nat64 -o eth0 -j ACCEPT
 
-tayga -d -c tayga.conf
+tayga -d -c tayga.conf &
 
 ```
 - Abrir host pc1 e digitar os comandos abaixo:
