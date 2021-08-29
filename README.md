@@ -91,15 +91,15 @@ touch tayga.conf
 
 echo tun-device nat64 >> tayga.conf
 echo ipv4-addr 192.0.2.1 >> tayga.conf
-echo prefix 2001:db8:ca00::/96 >> tayga.conf
+echo prefix 2001:db8:2::/96 >> tayga.conf
 echo dynamic-pool 192.0.2.0/24 >> tayga.conf
 echo data-dir /tmp >> tayga.conf
-echo map 192.168.255.100 2001:db8:ca5a:2::2 >> tayga.conf
+echo map 192.0.2.2 2001:db8:2::2 >> tayga.conf
 
 tayga --mktun
 
 ip link set nat64 up
-ip route add 192.168.255.0/24 dev nat64
+ip route add 192.0.2.0/24 dev nat64
 ip -6 route add 2001:db8:2::/96 dev nat64
 
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
@@ -111,16 +111,16 @@ tayga -d -c tayga.conf
 ```
 - Abrir host pc1 e digitar os comandos abaixo:
 ```
-ping6 -c 4 2001:db8:ca00::203.0.113.200
+ping6 -c 4 2001:db8:2::192.0.0.20
 ```
 - Em packet loss deve aparecer 0%
 
 - Digitar o comando abaixo em pc1:
 ```
-host 203.0.113.200
+host 192.0.0.20
 ```
 - O comando acima irá revelar que a url do servidor servidorDestino é **www.exemplo.psi.br**
-- Digitar o comando abaixo em n1:
+- Digitar o comando abaixo em pc1:
 ```
 ping6 -c 4 www.exemplo.psi.br
 ```
