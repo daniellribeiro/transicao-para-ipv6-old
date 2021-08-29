@@ -94,7 +94,7 @@ echo ipv4-addr 192.0.2.1 >> tayga.conf
 echo prefix 2001:db8:2::/96 >> tayga.conf
 echo dynamic-pool 192.0.2.0/24 >> tayga.conf
 echo data-dir /tmp >> tayga.conf
-echo map 192.0.2.2 2001:db8:0::20 >> tayga.conf
+echo map 192.0.0.20 2001:db8:0::20 >> tayga.conf
 
 tayga --mktun
 
