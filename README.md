@@ -100,7 +100,7 @@ tayga --mktun
 
 ip link set nat64 up
 ip route add 192.168.255.0/24 dev nat64
-ip -6 route add 2001:db8:ca00::/96 dev nat64
+ip -6 route add 2001:db8:2::/96 dev nat64
 
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 iptables -A FORWARD -i eth0 -o nat64 -m state --state RELATED,ESTABLISHED -j ACCEPT
