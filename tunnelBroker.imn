@@ -1,0 +1,162 @@
+node n1 {
+    type router
+    model PC
+    network-config {
+	hostname pc1
+	!
+	interface eth0
+	 ip address 192.0.2.20/24
+	!
+    }
+    canvas c1
+    iconcoords {169.0 364.0}
+    labelcoords {169.0 396.0}
+    interface-peer {eth0 n2}
+}
+
+node n5 {
+    type router
+    model PC
+    network-config {
+	hostname pc2
+	!
+	interface eth0
+	 ipv6 address 2001:db8:0::20/64
+	!
+    }
+    canvas c1
+    iconcoords {578.0 370.0}
+    labelcoords {578.0 402.0}
+    interface-peer {eth0 n3}
+}
+
+node n3 {
+    type router
+    model router
+    network-config {
+	hostname rTunnelBroker
+	!
+	interface eth1
+	 ipv6 address 2001:db8:0::1/64
+	!
+	interface eth0
+	 ip address 192.0.1.1/24
+	!
+    }
+    canvas c1
+    iconcoords {579.0 221.0}
+    labelcoords {579.0 253.0}
+    interface-peer {eth0 n2}
+    interface-peer {eth1 n5}
+}
+
+node n2 {
+    type router
+    model router
+    network-config {
+	hostname roteadorLocal
+	!
+	interface eth1
+	 ip address 192.0.2.1/24
+	!
+	interface eth0
+	 ip address 192.0.1.2/24
+	!
+    }
+    canvas c1
+    iconcoords {173.0 217.0}
+    labelcoords {173.0 249.0}
+    interface-peer {eth0 n3}
+    interface-peer {eth1 n1}
+}
+
+link l1 {
+    nodes {n2 n3}
+    bandwidth 0
+}
+
+link l2 {
+    nodes {n1 n2}
+    bandwidth 0
+}
+
+link l3 {
+    nodes {n3 n5}
+    bandwidth 0
+}
+
+annotation a1 {
+    iconcoords {51.0 122.0 339.0 450.0}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #c0c0ff
+    width 0
+    border #000000
+    rad 25
+    canvas c1
+}
+
+annotation a2 {
+    iconcoords {459.0 121.0 720.0 461.0}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #C0C0FF
+    width 0
+    border black
+    rad 25
+    canvas c1
+}
+
+annotation a3 {
+    iconcoords {124.0 435.0}
+    type text
+    label {REDE IPV4}
+    labelcolor #ff0000
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a4 {
+    iconcoords {540.0 438.0}
+    type text
+    label {REDE IPV6}
+    labelcolor #ff0000
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a5 {
+    type text
+    iconcoords {614.0 431.0}
+    label {}
+    canvas c1
+}
+
+canvas c1 {
+    name {Canvas1}
+}
+
+option global {
+    interface_names no
+    ip_addresses yes
+    ipv6_addresses yes
+    node_labels yes
+    link_labels no
+    show_api no
+    background_images no
+    annotations yes
+    grid yes
+    traffic_start 0
+}
+
+option session {
+}
+
