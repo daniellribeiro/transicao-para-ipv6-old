@@ -84,7 +84,7 @@ ping6 2001:db8::20
 - Arrastar arquivo baixado para VM
 - Abrir arquivo NAT_64.imn
 - Clicar no Play
-- Clicar duas vezes no NAT64, para abrir o terminal
+- Clicar duas vezes no rNAT64, para abrir o terminal
 - Digitar os comandos abaixo no terminal:
 ```
 touch tayga.conf
@@ -109,17 +109,17 @@ iptables -A FORWARD -i nat64 -o eth0 -j ACCEPT
 tayga -d -c tayga.conf
 
 ```
-- Abrir host n1 e digitar os comandos abaixo:
+- Abrir host pc1 e digitar os comandos abaixo:
 ```
 ping6 -c 4 2001:db8:ca00::203.0.113.200
 ```
 - Em packet loss deve aparecer 0%
 
-- Digitar o comando abaixo em n1:
+- Digitar o comando abaixo em pc1:
 ```
 host 203.0.113.200
 ```
-- O comando acima irá revelar que a url do servidor n10WWWExemplo é **www.exemplo.psi.br**
+- O comando acima irá revelar que a url do servidor servidorDestino é **www.exemplo.psi.br**
 - Digitar o comando abaixo em n1:
 ```
 ping6 -c 4 www.exemplo.psi.br
@@ -151,7 +151,7 @@ killall named
 
 named -c /etc/bind/named.conf
 ```
-- Abra host n2, e execute o comando abaixo:
+- Abra host pc1, e execute o comando abaixo:
 ```
 host www.exemplo.psi.br
 ```
